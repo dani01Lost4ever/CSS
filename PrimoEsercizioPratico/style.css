@@ -113,9 +113,6 @@ body {
   padding-left: 80px;
   padding-right: 80px;
   width: 300px;
-  :hover{
-    background-color: var(--buttonGreen);
-  };
 }
 
 .button .button-cart {
@@ -128,6 +125,10 @@ body {
   font-size: 1.2em;
   color: var(--white);
   font-weight: 500;
+}
+
+.button:hover{
+  background-color: var(--buttonGreen);
 }
 
 @media screen and (min-width: 700px){
