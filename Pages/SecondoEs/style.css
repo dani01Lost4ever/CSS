@@ -1,0 +1,160 @@
+:root{
+    --Bright_orange: hsl(31, 77%, 52%);
+    --Dark_cyan: hsl(184, 100%, 22%);
+    --Very_dark_cyan: hsl(179, 100%, 13%);
+    --black: #000000;
+    --white:#ffffff;
+}
+
+*{
+    color:var(--white);
+    font-family: 'Lexend Deca';
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0px 0px 0px 0px;
+    text-decoration: none;
+}
+body {
+    background-color: var(--white);
+    height: 1200px;
+}
+  
+.card-container {
+    background-color: var(--white);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr); /*questo serve per creare due righe di uguale altezza, 2volte 1frazione di spazio*/
+    width:  300px;
+    height: 700px;
+    margin:30px 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description {
+    height: 300px;
+    font-size: 16px;
+    padding: 40px;
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.7rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.div1{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--Bright_orange);
+}
+.div2{
+    background-color: var(--Dark_cyan);
+}
+.div3{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--Very_dark_cyan);
+}
+
+.ico{
+    width: 55px;
+    height: auto;
+}
+
+p{
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.button{
+    margin-top: 20px;
+    background-color: var(--white);
+    border-radius: 40px;
+    border-width: 0px;
+    height: 45px;
+    width: 55%;
+}
+
+.button.orange{
+    color:var(--Bright_orange);
+}
+.button.blue{
+    color:var(--Dark_cyan);
+}
+.button.green{
+    color: var(--Very_dark_cyan);
+}
+
+button:hover{
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white) !important;
+}
+
+
+  @media screen and (min-width: 700px){
+
+    body {
+        background-color: var(--white);
+        height: auto;
+    }
+
+    .card-container {
+        grid-template-rows:0;
+        grid-template-columns: repeat(3, 1fr);
+        width: 900px;
+        height: 500px;
+        margin-left: 450px;
+        margin-right: auto;
+        margin-top: 200px;
+        margin-bottom: auto;
+      }
+
+    h1{
+        font-size: 3.6rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    p{
+        line-height: 1.8;
+        font-size: 16px;
+        padding-right: 75px;
+    }
+
+    .ico{
+        width: 68px;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .description {
+        width: 300px;
+        height: 500px;
+        font-size: 16px;
+        padding-right: 0px;
+        padding-left: 45px;
+    }
+
+    .div1{
+        border-bottom-left-radius: 10px ;
+        border-top-right-radius: 0px;
+    }
+    .div3{
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px ;
+    }
+    .button{
+        margin-top: 100px;
+        background-color: var(--white);
+        border-radius: 40px;
+        border-width: 0px;
+        height: 55px;
+        width: 55%;
+        color: transparent;
+        font-size: 16px;
+    }
+  }
