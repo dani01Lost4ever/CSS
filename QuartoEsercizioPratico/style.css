@@ -1,0 +1,95 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+    --black: hsl(0,0%,0%);
+    /* ### Primary */
+    --Very_Dark_Blue: hsl(243, 87%, 12%);
+    --Desaturated_Blue: hsl(238, 22%, 44%);
+    /* ### Accent */
+    --Bright_Blue: hsl(224, 93%, 58%);
+    --Moderate_Cyan: hsl(170, 45%, 43%);
+    /* ### Neutral */
+    --Light_Grayish_Blue: hsl(240, 75%, 98%);
+    --Light_Gray: hsl(0, 0%, 75%);
+  }
+  
+  *, a{
+  color:var(--black);
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  margin: 0px 0px 0px 0px;
+  text-decoration: none;
+  }
+  
+  body{
+    background-color: var(--White);
+  }
+  .card-container {
+    background-color: var(--White);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); /*questo serve per creare due righe di uguale altezza, 2volte 1frazione di spazio*/
+    width:  350px;
+    height: 850px;
+    margin:30px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-areas:
+      "images"
+      "description";
+  }
+  
+  .images1 {
+    grid-area: images;
+    height: 239px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    background-image: url("images/illustration-1.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .images2 {
+    grid-area: images;
+    height: 239px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    background-image: url("images/illustration-2.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .backgroudSecondPart{
+    background-image: url("images/bg-curve-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .card-container3Parts{
+    background-color: var(--White);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr); /*questo serve per creare due righe di uguale altezza, 2volte 1frazione di spazio*/
+    width:  350px;
+    height: 850px;
+    margin:30px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-areas:
+      "images"
+      "description"
+      "footer";
+  }
+  .description {
+    grid-area: description;
+    margin: 0px;
+  }
+  .footer{
+    grid-area: footer;
+  }
