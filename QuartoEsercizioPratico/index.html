@@ -7,65 +7,97 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Raleway:wght@400;700;800&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
   <link rel=" stylesheet" href="style.css";
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; margin-top:300px}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-  <div>
-      Features
-      Team
-      Sign In
+  <div class="navBar">
+    <img src="images/logo.svg" alt="logo" class="logo"/>
+    <div class="navBar navBarItems">
+      <span>Features</span>
+      <span>Team</span>
+      <span>Sign In</span>
+    </div>
   </div>
 
   <div class="card-container">
     <div class="images1"></div>
     <div class="description">
-
+      
+    <h1 class="description h1">All your files in one secure location, accessible anywhere.</h1>
     
-      All your files in one secure location, accessible anywhere.
-    
+    <p class="description par">
       Fylo stores your most important files in one secure location. 
       Access them wherever you need, share and collaborate with friends, 
       family, and co-workers.
-    
-      Get Started
+    </p>
+    <div class="card-inputButton">
+      <input placeholder="    Enter your email..." class="inputField"/>
+      <button class="buttonField">Get Started</button>
+    </div>
+
     </div>
   </div>
   
-
+  <div class="backgroudSecondPart"></div>
     <div class="card-container3Parts">
-      <div class="backgroudSecondPart">
+
         <div class="images2"></div>
-        <div class="description">
-          Stay productive, wherever you are
+
+        <div class="description secondPart">
+          <h1 class="secondTitle">Stay productive, wherever you are</h1>
         
-          Never let location be an issue when accessing your files. Fylo has you 
-          covered for all of your file storage needs.
-        
-          Securely share files and folders with friends, family and colleagues for 
-          live collaboration. No email attachments required!
+            <p class="secondDescription">
+              Never let location be an issue when accessing your files. Fylo has you 
+              covered for all of your file storage needs.
+            </p>
+            <p class="secondDescription">
+              Securely share files and folders with friends, family and colleagues for 
+              live collaboration. No email attachments required!
+            </p>
         </div>
 
-        See how Fylo works
-      
-        Fylo has improved our team productivity by an order of magnitude. Since 
-        making the switch our team has become a well-oiled collaboration machine.
-      
-        Kyle Burton
-        Founder & CEO, Huddle
-      
-        Get early access today
-      
-        It only takes a minute to sign up and our free starter tier is extremely generous. 
-        If you have any questions, our support team would be happy to help you.
-      
-        Get Started For Free
+        <a href="#" class="link">
+          <div class="contentLink">
+              <span class="underline">See how Fylo works</span>
+              <img src="images/icon-arrow.svg" class="linkImg" alt="arrow"/>
+          </div>
+        </a>
+        
+        <div class="divCard">
+          <img class="doubleQuotes" src="images/icon-quotes.svg"/>
+          <p class="cardP">
+            Fylo has improved our team productivity by an order of magnitude. Since 
+            making the switch our team has become a well-oiled collaboration machine.
+          </p>
+          <div class="cardGrid">
+            <img class="testimonial" src="images/avatar-testimonial.jpg"/>
+            <div class="textTestimonial">
+              <p class="cardName">Kyle Burton</p> 
+              <p class="cardText">Founder & CEO, Huddle</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="subscribe">
+          <h2>Get early access today</h2>
+          <p>
+            It only takes a minute to sign up and our free starter tier is extremely generous. 
+            If you have any questions, our support team would be happy to help you.
+          </p>
+          <input placeholder="email@example.com"/>
+          <button class="buttonField buttonSubscribe">
+            Get Started For Free
+          </button>
+        </div>
+       
       
         Phone: +1-543-123-4567
         example@fylo.com
@@ -78,7 +110,7 @@
         Contact Us
         Terms
         Privacy
-    </div>
+
   </div>
   
 
