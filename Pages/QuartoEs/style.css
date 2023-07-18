@@ -14,9 +14,9 @@
   
   *, a{
   color:var(--black);
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 400;
   margin: 0px 0px 0px 0px;
   text-decoration: none;
   }
@@ -24,13 +24,39 @@
   body{
     background-color: var(--White);
   }
+
+  .navBar{
+    display: flex;
+    margin-left: 25px;
+    margin-top: 19px;
+    margin-right: 25px;
+    justify-content:space-between;
+    align-items: flex-end;
+  }
+  .logo{
+    height: 24px;
+    width: auto;
+  }
+  .navBar.navBarItems{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 170px;
+    justify-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .navBarItems span{
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--Desaturated_Blue);
+  }
+
   .card-container {
     background-color: var(--White);
-    border-radius: 10px;
     display: grid;
     grid-template-rows: repeat(2, 1fr); /*questo serve per creare due righe di uguale altezza, 2volte 1frazione di spazio*/
-    width:  350px;
-    height: 850px;
+    width:  375px;
+    height: 600px;
     margin:30px 15px;
     margin-left: auto;
     margin-right: auto;
@@ -41,44 +67,110 @@
   
   .images1 {
     grid-area: images;
-    height: 239px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius:0px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 0px;
+    height: 280px;
+    scale: 0.85;
     background-image: url("images/illustration-1.svg");
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
+
   .images2 {
     grid-area: images;
-    height: 239px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius:0px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 0px;
+    scale: 0.9;
+    height: 280px;
     background-image: url("images/illustration-2.svg");
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 10px;
   }
   
+  .description {
+    grid-area: description;
+    margin: 0px;
+  }
+
+  .description.h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    color: var(--Very_Dark_Blue);
+    font-size: 25px;
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    
+  }
+  .description.par{
+    font-size: 14px;
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 600;
+    color: var(--Very_Dark_Blue);
+    text-align: center;
+  }
+
+  .description.inputEmail{
+    align-self: center;
+  }
+
+  .description.secondPart{
+    background-color: var(--Light_Grayish_Blue);
+  }
+
+  .card-inputButton{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); /*questo serve per creare due righe di uguale altezza, 2volte 1frazione di spazio*/
+    width:  325px;
+    height: 100px;
+    margin:25px 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .inputField{
+    height: 35px;
+    padding-bottom: 5px;
+    border-radius: 4px;
+    border-color: var(--black);
+    border-width: 1px;
+    font-size: 12px;
+    border-style: solid;
+  }
+
+  .buttonField{
+    border-color: transparent;
+    margin-top:8px;
+    height: 42px;
+    padding-bottom: 5px;
+    border-radius: 3px;
+    background-color: var(--Bright_Blue);
+    font-weight: 700;
+    color: var(--White);
+    border-width: 1px;
+    font-size: 14px;
+    border-style: solid;
+  }
+
   .backgroudSecondPart{
+    margin-top: 80px;
     background-image: url("images/bg-curve-mobile.svg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     background-position: center;
+    padding-top: 40px;
+    width: 100%;
+    height: 30px;
   }
   .card-container3Parts{
-    background-color: var(--White);
+    background-color: var(--Light_Grayish_Blue);
     border-radius: 10px;
     display: grid;
     grid-template-rows: repeat(3, 1fr); /*questo serve per creare due righe di uguale altezza, 2volte 1frazione di spazio*/
-    width:  350px;
-    height: 850px;
-    margin:30px 15px;
+    width:  375px;
+    height: 820px;
     margin-left: auto;
     margin-right: auto;
     grid-template-areas:
@@ -86,10 +178,436 @@
       "description"
       "footer";
   }
+
+  .secondTitle{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    color: var(--Very_Dark_Blue);
+    font-size: 16px;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 25px;
+  }
+
+  .secondDescription{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+    color: var(--Desaturated_Blue);
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .link {
+    text-decoration: none;
+    color: var(--Moderate_Cyan);
+    text-align: center;
+}
+
+.contentLink::after {
+    content: "";
+    border-bottom: 2px solid var(--Moderate_Cyan);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+}
+
+.contentLink {
+    display: inline-block;
+    position: relative;
+}
+
+.linkImg {
+    display: inline-block;
+    height: 18px;
+    vertical-align: middle;
+}
+
+.underline {
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--Moderate_Cyan);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.divCard{
+  margin-top: 45px;
+  width: 84%;
+  background-color: var(--White);
+  justify-self: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 15px 5px #f4f3f7; 
+  box-shadow: 0px 0px 15px 5px #f4f3f7;
+}
+
+.doubleQuotes{
+  padding-top: 30px;
+  padding-left: 30px;
+  height: 15px;
+  width: auto;
+}
+
+.cardP{
+  padding-top: 5px;
+  padding-left: 30px;
+  padding-right: 20px;
+  font-size: 11px;
+  color: var(--Desaturated_Blue);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.cardGrid{
+  display: flex;
+  width: 200px;
+  margin-left: 32px;
+  padding-top: 10px;
+  justify-self: center;
+}
+.testimonial{
+  height: 26px;
+  width: auto;
+  border-radius: 50%;
+}
+.textTestimonial{
+  padding-left: 7px;
+  padding-bottom: 25px;
+}
+.cardName{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: var(--Very_Dark_Blue);
+  font-size: 10px;
+}
+.cardText{
+  justify-self: flex-end;
+  font-size: 8px;
+  color: var(--Very_Dark_Blue);
+}
+
+.subscribe{
+  padding-bottom: 50px;
+  margin-top: 80px;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--Desaturated_Blue);
+}
+.subscribe h2{
+  color: var(--White);
+  text-align: center;
+  font-weight: 600;
+  font-size: 17px;
+  padding-top: 38px;
+  padding-bottom: 15px;
+}
+.subscribe p{
+  color: var(--White);
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-size: 14px;
+  padding-left: 47px;
+  padding-right: 47px;
+  font-weight: 400;
+  line-height: 1.4;
+  padding-bottom: 20px;
+}
+.subscribe input{
+  border-radius: 3px;
+  border-width: 0px;
+  height: 35px;
+  font-size: 12px;
+  color: var(--Light_Gray);
+  width: 240px;
+  align-self: center;
+}
+
+.field-subscribe {
+  width: 50%;
+  padding-right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-self: center;
+  gap: 0px;
+}
+
+.buttonField.buttonSubscribe{
+  width: 242px;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  height: 500px;
+}
+
+footer {
+  background-color: var(--Very_Dark_Blue);
+  padding: 60px 0;
+}
+
+footer .brand {
+  filter: invert(98%) sepia(100%) saturate(9%) hue-rotate(196deg)
+    brightness(102%) contrast(104%);
+  -webkit-filter: invert(98%) sepia(100%) saturate(9%) hue-rotate(196deg)
+    brightness(102%) contrast(104%);
+}
+
+.footer_btm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 10px;
+}
+.contact a{
+  color: var(--White);
+}
+.footer_menu li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  
+}
+
+.footer_menu li a {
+  color: var(--White);
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.footer_menu li a:hover {
+  color: var(--desaturatedBlue);
+}
+
+.footer_socmed {
+  padding-left: 60px;
+  display: flex;
+  column-gap: 20px;
+  align-items: flex-start;
+}
+
+.socmed {
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.socmed:hover {
+  color: var(--desaturatedBlue);
+}
+
+.attribution {
+  text-align: center;
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 375px){
+  .navBar{
+    margin-left: 45px;
+    margin-top: 45px;
+    margin-right: 45px;
+  }
+  .logo{
+    height: 48px;
+  }
+  .navBar.navBarItems{
+    width: 350px;
+  }
+  .navBarItems span{
+    font-size: 16px;
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /*questo serve per creare due righe di uguale altezza, 2volte 1frazione di spazio*/
+    width:  94%;
+    height: 500px;
+    margin-top:50px;
+    margin-left: 15px;
+    grid-template-areas:
+    "description images";
+  }
+  .images1 {
+    height: 500px;
+    width: auto;
+    scale: 1;
+    background-position: center;
+  }
+  .description.h1{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.4;
+  }
   .description {
-    grid-area: description;
+    padding-right: 40px;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: left !important;
     margin: 0px;
+    justify-content: flex-start;
   }
-  .footer{
-    grid-area: footer;
+  .description.par{
+    padding-right: 60px;
+    font-size: 16px;
   }
+  .card-inputButton{
+    margin-left: 25px;
+    grid-template-columns: repeat(2, 1fr); /*questo serve per creare due righe di uguale altezza, 2volte 1frazione di spazio*/
+    width:  530px;
+    margin-top:25px;
+  }
+  .inputField{
+    width: 350px;
+  }
+  .buttonField{
+    margin-top:0px;
+    margin-left: 12px;
+    width: 150px;
+  }
+
+
+  .backgroudSecondPart{
+    position: relative;
+    margin-top: 0px;
+    background-image: url("images/bg-curve-mobile.svg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    padding-top: 0px;
+    width: 100%;
+    height: 300px;
+    top: 150px;
+  }
+  .card-container3Parts{
+    padding-left: 20px;
+    grid-template-columns: repeat(2, 1fr); /*questo serve per creare due righe di uguale altezza, 2volte 1frazione di spazio*/
+    width:  100%;
+    height: 600px;
+    grid-template-areas:
+      "description images";
+  }
+  .secondTitle{
+    padding-left: 20px;
+    font-size: 35px;
+    text-align:start;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    z-index: 10;
+  }
+  .secondDescription{
+    padding-left: 20px;
+    padding-right: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    z-index: 10;
+  }
+  .link {
+    position: relative;
+    align-self:center;
+    padding-left: 20px;
+    text-align: left;
+    grid-area: description;
+    top: -50px
+  }
+
+  .divCard{
+    position: relative;
+    align-self: flex-end;
+    margin-top: 0px;
+    width: 44%;
+    margin-left: 20px;
+    justify-self:flex-start;
+    grid-area: description;
+    top: -60px
+  }
+
+  .images2 {
+    margin-right: 100px;
+    scale: 1;
+    height: 500px;
+    margin-top: 10px;
+  }
+
+  .subscribe {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%; /*or another value what do you want*/
+    margin-left:auto;
+    margin-right: auto;
+  }
+  
+  .text-subscribe {
+    max-width: 50%;
+  }
+  
+  .field-subscribe {
+    padding-left: 100px;
+    padding-top: 40px;
+    width: 50%;
+    padding-right: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-self: center;
+    gap: 10px; /* Add space between the input and the button */
+  }
+  
+  .subscribe input {
+    width: 100%;
+    align-self: flex-start;
+  }
+  
+  .buttonField.buttonSubscribe {
+    width: 40%;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+
+  .subscribe h2{
+    font-size: 22px;
+    text-align: start;
+    padding-left: 40px;
+    padding-bottom: 20px;
+  }
+  .subscribe p{
+    font-size: 15px;
+    text-align: start;
+    padding-left: 40px;
+    padding-right: 250px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+  }
+
+  .footer_btm {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .container {
+    height: 200px;
+  }
+}
