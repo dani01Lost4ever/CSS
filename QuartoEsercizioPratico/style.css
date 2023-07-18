@@ -604,10 +604,12 @@ footer .brand {
   }
 
   .footer_btm {
+    left:-50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
   .container {
     height: 200px;
+    margin-left: 40px;
   }
 }
