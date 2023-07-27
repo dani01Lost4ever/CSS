@@ -199,6 +199,7 @@
   }
 
   .link {
+    width: 200px;
     text-decoration: none;
     color: var(--Moderate_Cyan);
     text-align: center;
@@ -230,6 +231,10 @@
     color: var(--Moderate_Cyan);
     font-size: 14px;
     font-weight: 500;
+}
+
+.link:hover {
+  filter: brightness(150%);
 }
 
 .divCard{
